@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ressources complètes sur les drones, autopilotes, UAV Challenge Dassault, essaims de drones, ROS, pilotage GPS et télémétrie.">
+<meta name="keywords" content="drone, UAV, PX4, ROS, autopilote, essaim, télémétrie, GPS, Dassault UAV Challenge">
+<meta name="language" content="fr">
+<title>Ressources Drones - Documentation Complète</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background: #f4f4f4; }
+header { background: #2c3e50; color: white; padding: 20px; margin-bottom: 30px; border-radius: 5px; }
+header h1 { margin: 0; }
+header p { margin: 5px 0 0 0; font-size: 0.9em; }
+.container { max-width: 1000px; margin: 0 auto; }
+.category { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.category h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+.subcategory { margin: 15px 0; }
+.subcategory h3 { color: #34495e; margin: 10px 0 5px 0; }
+.link-item { margin: 10px 0; padding: 10px; background: #ecf0f1; border-left: 4px solid #3498db; border-radius: 3px; }
+.link-item p { margin: 5px 0; color: #555; font-size: 0.95em; }
+.link-item a { color: #2980b9; text-decoration: none; word-break: break-all; }
+.link-item a:hover { text-decoration: underline; }
+footer { text-align: center; margin-top: 40px; padding: 20px; background: #ecf0f1; border-radius: 5px; font-size: 0.9em; color: #7f8c8d; }
+.toc { background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+.toc h3 { margin-top: 0; color: #2c3e50; }
+.toc ul { margin: 10px 0; padding-left: 20px; }
+.toc a { color: #2980b9; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>��� Ressources Drones - Documentation Complète</h1>
+<p>Ressources open source et documentation pour drones, autopilotes, essaims, ROS, pilotage GPS et télémétrie</p>
+</header>
+
+<div class="container">
+
+<div class="toc">
+<h3>📑 Table des matières</h3>
+<ul>
+<li><a href="#fondamentaux">Fondamentaux des Drones</a></li>
+<li><a href="#autopilotes">Autopilotes et Systèmes de Contrôle</a></li>
+<li><a href="#dassault-uav">UAV Challenge Dassault</a></li>
+<li><a href="#essaims">Essaims de Drones</a></li>
+<li><a href="#pilotage">Pilotage et Contrôle</a></li>
+<li><a href="#gps-navigation">Pilotage GPS et Navigation</a></li>
+<li><a href="#telemetrie">Télémétrie et Capteurs</a></li>
+<li><a href="#ros">Programmation ROS</a></li>
+<li><a href="#simulation">Simulation et Outils</a></li>
+<li><a href="#reglementation">Réglementation</a></li>
+<li><a href="#github">Projets GitHub</a></li>
+</ul>
+</div>
+
+<!-- FONDAMENTAUX DES DRONES -->
+<div class="category" id="fondamentaux">
+<h2>1. Fondamentaux des Drones</h2>
+
+<div class="subcategory">
+<h3>Principes Généraux</h3>
+<div class="link-item">
+<p><strong>Qu'est-ce qu'un drone ?</strong> Un drone (ou UAV - Unmanned Aerial Vehicle) est un aéronef sans pilote à bord, contrôlé à distance ou de manière autonome.</p>
+</div>
+<div class="link-item">
+<p><strong>Types de drones :</strong> Multirotor (quadcoptères, hexacoptères), avions fixes, hélicoptères, VTOL (décollage/atterrissage vertical)</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Composants Essentiels</h3>
+<div class="link-item">
+<p><strong>Moteurs et Hélices :</strong> Moteurs électriques brossless (BLDC) avec contrôleurs ESC (Electronic Speed Controller)</p>
+</div>
+<div class="link-item">
+<p><strong>Batterie :</strong> LiPo (Lithium Polymère) haute densité énergétique pour l'autonomie en vol</p>
+</div>
+<div class="link-item">
+<p><strong>Capteurs IMU :</strong> Accéléromètres, gyroscopes, magnétomètres pour la stabilité et l'orientation</p>
+</div>
+<div class="link-item">
+<p><strong>Récepteur :</strong> Reçoit les commandes radio de la télécommande ou du sol</p>
+</div>
+</div>
+</div>
+
+<!-- AUTOPILOTES -->
+<div class="category" id="autopilotes">
+<h2>2. Autopilotes et Systèmes de Contrôle</h2>
+
+<div class="subcategory">
+<h3>PX4 Autopilot</h3>
+<div class="link-item">
+<p><strong>Documentation Officielle PX4</strong></p>
+<p>Stack complet open source pour autopilotes. Contrôle de vol, navigation autonome, gestion des capteurs.</p>
+<a href="https://docs.px4.io/main/">https://docs.px4.io/main/</a>
+</div>
+<div class="link-item">
+<p><strong>GitHub PX4</strong></p>
+<p>Code source complet, drivers, modules de contrôle, exemples missions.</p>
+<a href="https://github.com/PX4/PX4-Autopilot">https://github.com/PX4/PX4-Autopilot</a>
+</div>
+<div class="link-item">
+<p><strong>PX4 Architecture</strong></p>
+<p>Modules de pilotage, estimateurs d'état, contrôleurs attitude/position, gestion des modes de vol.</p>
+<a href="https://docs.px4.io/main/en/concept/architecture.html">https://docs.px4.io/main/en/concept/architecture.html</a>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Ardupilot</h3>
+<div class="link-item">
+<p><strong>Ardupilot Open Source</strong></p>
+<p>Alternative majeure à PX4. Support pour copters, planes, rovers, submarines.</p>
+<a href="https://ardupilot.org/">https://ardupilot.org/</a>
+</div>
+<div class="link-item">
+<p><strong>GitHub Ardupilot</strong></p>
+<p>Pilotage autonome complet, modes de vol, contrôle moteur, navigation.</p>
+<a href="https://github.com/ArduPilot/ardupilot">https://github.com/ArduPilot/ardupilot</a>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Matériel Compatible</h3>
+<div class="link-item">
+<p><strong>Pixhawk :</strong> Carte de contrôle de vol hardware open source basée sur STM32</p>
+</div>
+<div class="link-item">
+<p><strong>Cube Orange/Purple :</strong> Évolutions de Pixhawk avec meilleure capacité de traitement</p>
+</div>
+</div>
+</div>
+
+<!-- UAV CHALLENGE DASSAULT -->
+<div class="category" id="dassault-uav">
+<h2>3. UAV Challenge Dassault</h2>
+
+<div class="subcategory">
+<h3>Présentation Générale</h3>
+<div class="link-item">
+<p><strong>Dassault UAV Challenge - Édition 2024</strong></p>
+<p>Initiative de Dassault Aviation destinée aux étudiants et équipes de recherche. Compétition robotique et innovation en systèmes aériens sans pilote.</p>
+<a href="https://www.dassault-aviation.com/fr/groupe/actualites/envie-de-rejoindre-la-13eme-saison-du-dassault-uav-challenge/">https://www.dassault-aviation.com/fr/groupe/actualites/envie-de-rejoindre-la-13eme-saison-du-dassault-uav-challenge/</a>
+</div>
+
+<div class="link-item">
+<p><strong>Objectifs de la Compétition</strong></p>
+<p>Développer des drones autonomes capables de :</p>
+<ul>
+<li>Navigation autonome en environnement urbain/rural</li>
+<li>Détection et classification d'objets</li>
+<li>Coordination multi-drones</li>
+<li>Gestion de l'énergie et optimisation des trajectoires</li>
+</ul>
+</div>
+
+<div class="link-item">
+<p><strong>Catégories Principales</strong></p>
+<ul>
+<li>Drones quadcoptères</li>
+<li>Drones à ailes fixes</li>
+<li>VTOL (décollage/atterrissage vertical)</li>
+<li>Systèmes multi-drones</li>
+<li>Essaims de drones</li>
+</ul>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Ressources pour Participants</h3>
+<div class="link-item">
+<p><strong>Règlement et Conditions</strong></p>
+<p>Cahier des charges complet, spécifications techniques, critères d'évaluation, calendrier des phases.</p>
+</div>
+<div class="link-item">
+<p><strong>Mentoring et Support</strong></p>
+<p>Accès à des mentors industriels, sessions de formation, ressources techniques partagées.</p>
+</div>
+</div>
+</div>
+
+<!-- ESSAIMS DE DRONES -->
+<div class="category" id="essaims">
+<h2>4. Essaims de Drones (Drone Swarms)</h2>
+
+<div class="subcategory">
+<h3>Concepts Fondamentaux</h3>
+<div class="link-item">
+<p><strong>Qu'est-ce qu'un essaim de drones ?</strong></p>
+<p>Ensemble de drones autonomes travaillant ensemble de manière coordonnée, avec communication décentralisée et intelligence collective.</p>
+</div>
+<div class="link-item">
+<p><strong>Applications des Essaims</strong></p>
+<ul>
+<li>Surveillance et reconnaissance de zones</li>
+<li>Cartographie et relevés géographiques</li>
+<li>Recherche et sauvetage</li>
+<li>Intervention d'urgence</li>
+<li>Inspection d'infrastructures étendues</li>
+</ul>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Technologies d'Essaim</h3>
+<div class="link-item">
+<p><strong>Communication Décentralisée</strong></p>
+<p>Protocoles mesh, ad-hoc networking, communication peer-to-peer entre agents sans point central.</p>
+</div>
+<div class="link-item">
+<p><strong>Algorithmes de Coordination</strong></p>
+<p>Flocking, consensus distribué, formation control, path planning collaboratif.</p>
+</div>
+<div class="link-item">
+<p><strong>Intelligence Collective</strong></p>
+<p>Agents autonomes prenant décisions locales menant à comportement global cohérent (stigmergie).</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Projets et Documentation</h3>
+<div class="link-item">
+<p><strong>GitHub — Drone Swarm</strong></p>
+<p>Projets open source consacrés aux essaims de drones et systèmes multi-drones.</p>
+<a href="https://github.com/topics/drone-swarm">https://github.com/topics/drone-swarm</a>
+</div>
+<div class="link-item">
+<p><strong>DARPA Swarmanoid Challenge</strong></p>
+<p>Benchmark international pour essaims de robots miniaturisés et coordonnés.</p>
+</div>
+<div class="link-item">
+<p><strong>Multi-Agent Path Finding (MAPF)</strong></p>
+<p>Techniques de planification de trajectoires pour plusieurs agents évitant collisions.</p>
+</div>
+</div>
+</div>
+
+<!-- PILOTAGE ET CONTRÔLE -->
+<div class="category" id="pilotage">
+<h2>5. Pilotage et Contrôle</h2>
+
+<div class="subcategory">
+<h3>Modes de Pilotage</h3>
+<div class="link-item">
+<p><strong>Télépilotage Manuel</strong></p>
+<p>Contrôle direct en temps réel via télécommande ou station sol. Tous les mouvements gérés par l'opérateur.</p>
+</div>
+<div class="link-item">
+<p><strong>Modes Stabilisés</strong></p>
+<p>Altitude hold, attitude hold : l'autopilote stabilise le drone, opérateur contrôle vitesse/direction.</p>
+</div>
+<div class="link-item">
+<p><strong>Pilotage Autonome</strong></p>
+<p>Missions programmées, waypoints, retour auto à la base, lancements/atterrissages automatiques.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Contrôleurs de Vol</h3>
+<div class="link-item">
+<p><strong>Contrôleur d'Attitude</strong></p>
+<p>Boucles PID pour maintenir orientation (roll, pitch, yaw). Entrées : angles désirés, sorties : vitesses moteur.</p>
+</div>
+<div class="link-item">
+<p><strong>Contrôleur de Position</strong></p>
+<p>Navigation vers waypoints. Utilise capteurs GPS, vision, inertie pour localisation et trajectoire.</p>
+</div>
+<div class="link-item">
+<p><strong>Filtres Estimateurs</strong></p>
+<p>Kalman filter : fusionne données IMU, GPS, baromètre pour état optimal (position, vitesse, orientation).</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Documentation Pilotage</h3>
+<div class="link-item">
+<p><strong>PX4 - Flight Modes</strong></p>
+<p>Modes de vol disponibles, transitions, configurations, sélection en fonction de mission.</p>
+<a href="https://docs.px4.io/main/en/flight_modes/index.html">https://docs.px4.io/main/en/flight_modes/index.html</a>
+</div>
+<div class="link-item">
+<p><strong>Ardupilot - Flight Modes</strong></p>
+<p>Modes de copter, plane, rover. Copter : Stabilize, AltHold, Loiter, Auto, Guided, etc.</p>
+<a href="https://ardupilot.org/copter/docs/flight-modes.html">https://ardupilot.org/copter/docs/flight-modes.html</a>
+</div>
+</div>
+</div>
+
+<!-- PILOTAGE GPS ET NAVIGATION -->
+<div class="category" id="gps-navigation">
+<h2>6. Pilotage GPS et Navigation Autonome</h2>
+
+<div class="subcategory">
+<h3>Systèmes de Localisation</h3>
+<div class="link-item">
+<p><strong>GPS (Global Positioning System)</strong></p>
+<p>Système américain de positionnement. Précision : 5-10 mètres en mode standard, meilleure avec DGPS/RTK.</p>
+</div>
+<div class="link-item">
+<p><strong>GNSS (Global Navigation Satellite System)</strong></p>
+<p>Ensemble des systèmes : GPS (USA), GLONASS (Russie), Galileo (Europe), BeiDou (Chine).</p>
+</div>
+<div class="link-item">
+<p><strong>RTK (Real-Time Kinematic)</strong></p>
+<p>Technique de correction différentielle. Précision centimétrique avec station base. Essentiel pour missions de précision.</p>
+</div>
+<div class="link-item">
+<p><strong>Vision-Based Navigation</strong></p>
+<p>Caméra + optical flow pour localisation en indoor/zones sans GPS (vision monoculaire/stéréo).</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Planification de Trajectoires</h3>
+<div class="link-item">
+<p><strong>Waypoint Navigation</strong></p>
+<p>Définir liste de points GPS à visiter séquentiellement. Drone calcule trajectoires optimales.</p>
+</div>
+<div class="link-item">
+<p><strong>Path Planning Algorithms</strong></p>
+<p>Dijkstra, A*, RRT (Rapidly-exploring Random Trees) pour générer chemins sans collisions.</p>
+</div>
+<div class="link-item">
+<p><strong>Obstacle Avoidance</strong></p>
+<p>Détection en temps réel via lidar, radar, caméras. Recalcul de trajectoire à la volée.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Ressources Techniques</h3>
+<div class="link-item">
+<p><strong>PX4 - Position Controller</strong></p>
+<p>Architecture de contrôle position/vitesse, fusion sensorielle, compensation du vent.</p>
+<a href="https://docs.px4.io/main/en/flight_controller/autopilot_architecture.html">https://docs.px4.io/main/en/flight_controller/autopilot_architecture.html</a>
+</div>
+<div class="link-item">
+<p><strong>RTK GPS Setup</strong></p>
+<p>Configuration stations base, communication radio, calibrage précision.</p>
+<a href="https://docs.px4.io/main/en/gps_compass/rtk_gps.html">https://docs.px4.io/main/en/gps_compass/rtk_gps.html</a>
+</div>
+</div>
+</div>
+
+<!-- TÉLÉMÉTRIE -->
+<div class="category" id="telemetrie">
+<h2>7. Télémétrie et Capteurs</h2>
+
+<div class="subcategory">
+<h3>Données de Télémétrie</h3>
+<div class="link-item">
+<p><strong>État de Vol</strong></p>
+<p>Position (lat, lon, alt), vitesse, attitude (roll, pitch, yaw), accélérations.</p>
+</div>
+<div class="link-item">
+<p><strong>Santé du Système</strong></p>
+<p>Tension batterie, courant, température moteurs, état ESC, saturation capteurs.</p>
+</div>
+<div class="link-item">
+<p><strong>Diagnostique et Erreurs</strong></p>
+<p>Codes d'erreur, avertissements, logs de vol pour débogage post-mission.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Capteurs Principaux</h3>
+<div class="link-item">
+<p><strong>IMU (Inertial Measurement Unit)</strong></p>
+<p>Accéléromètres (3 axes), gyroscopes (3 axes), magnétomètre (compas). Fréquence : 500-1000 Hz.</p>
+</div>
+<div class="link-item">
+<p><strong>Baromètre</strong></p>
+<p>Mesure pression atmosphérique → altitude. Essentiel pour altitude hold.</p>
+</div>
+<div class="link-item">
+<p><strong>GPS/GNSS</strong></p>
+<p>Position globale, vitesse, heading. Fréquence : 1-10 Hz selon module.</p>
+</div>
+<div class="link-item">
+<p><strong>Caméra</strong></p>
+<p>Vision pour détection d'objets, mapping, évitement d'obstacles, opérations terrain.</p>
+</div>
+<div class="link-item">
+<p><strong>Lidar</strong></p>
+<p>Scan 3D de l'environnement. Distance 2D/3D pour navigation précise, mapping.</p>
+</div>
+<div class="link-item">
+<p><strong>Capteurs Spécialisés</strong></p>
+<p>Infrarouge thermique, multispectral, radiométrie pour applications scientifiques/inspection.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Protocoles de Communication</h3>
+<div class="link-item">
+<p><strong>MAVLink</strong></p>
+<p>Protocole standard industrie. Échange messages entre autopilote et station sol. Binaire, efficace, extensible.</p>
+<a href="https://mavlink.io/">https://mavlink.io/</a>
+</div>
+<div class="link-item">
+<p><strong>QGroundControl</strong></p>
+<p>Station sol universelle. Telemetry en temps réel, planification missions, tuning paramètres.</p>
+<a href="http://qgroundcontrol.com/">http://qgroundcontrol.com/</a>
+</div>
+<div class="link-item">
+<p><strong>Logging et Data Analysis</strong></p>
+<p>Enregistrement complet missions. Analyse post-vol : performance, anomalies, optimisation.</p>
+</div>
+</div>
+</div>
+
+<!-- PROGRAMMATION ROS -->
+<div class="category" id="ros">
+<h2>8. Programmation ROS (Robot Operating System)</h2>
+
+<div class="subcategory">
+<h3>Introduction à ROS</h3>
+<div class="link-item">
+<p><strong>ROS Official</strong></p>
+<p>Framework open source pour robotique. Gestion capteurs, contrôleurs, planification, vision, simulation.</p>
+<a href="https://www.ros.org/">https://www.ros.org/</a>
+</div>
+<div class="link-item">
+<p><strong>ROS 2</strong></p>
+<p>Évolution moderne de ROS. DDS middleware, sécurité renforcée, performance temps réel améliorée.</p>
+<a href="https://docs.ros.org/en/humble/">https://docs.ros.org/en/humble/</a>
+</div>
+<div class="link-item">
+<p><strong>Architecture ROS</strong></p>
+<p>Noeuds (nodes), topics (pub/sub), services (RPC), actions (long-running tasks). Communication distribuée.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>ROS pour Drones</h3>
+<div class="link-item">
+<p><strong>MAVSDK - MAVLink SDK</strong></p>
+<p>Librairie ROS pour communicer avec autopilotes (PX4, Ardupilot). Contrôle haut-niveau, missions, accès télé.</p>
+<a href="https://mavsdk.io/">https://mavsdk.io/</a>
+</div>
+<div class="link-item">
+<p><strong>MAVSDK GitHub</strong></p>
+<p>Code source et exemples d'intégration avec PX4 et Ardupilot.</p>
+<a href="https://github.com/mavlink/MAVSDK">https://github.com/mavlink/MAVSDK</a>
+</div>
+<div class="link-item">
+<p><strong>PX4 ROS Integration</strong></p>
+<p>Packages ROS officiels pour contrôle PX4, simulation Gazebo, vision processing.</p>
+<a href="https://docs.px4.io/main/en/ros/ros1.html">https://docs.px4.io/main/en/ros/ros1.html</a>
+</div>
+<div class="link-item">
+<p><strong>Ardupilot ROS</strong></p>
+<p>Packages ROS pour Ardupilot, intégration mavproxy, navigation autonome.</p>
+<a href="https://ardupilot.org/dev/docs/ros.html">https://ardupilot.org/dev/docs/ros.html</a>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Modules Robotiques Clés</h3>
+<div class="link-item">
+<p><strong>Navigation Stack</strong></p>
+<p>Planification trajectoires (move_base), costmaps locales/globales, évitement obstacles temps réel.</p>
+</div>
+<div class="link-item">
+<p><strong>Vision (cv_bridge, image_transport)</strong></p>
+<p>Traitement images OpenCV intégré ROS. Object detection, SLAM visuel, reconnaissance.</p>
+</div>
+<div class="link-item">
+<p><strong>rviz et rqt</strong></p>
+<p>Visualisation 3D temps réel, graphes topics/services, tunage paramètres dynamiques.</p>
+</div>
+<div class="link-item">
+<p><strong>tf (Transform Framework)</strong></p>
+<p>Gestion coordonnées multiples frames (body, world, camera). Fusion sensorielle.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Ressources d'Apprentissage ROS</h3>
+<div class="link-item">
+<p><strong>ROS Tutorials</strong></p>
+<p>Guides officiels installation, premiers nodes, communication pub/sub, services.</p>
+<a href="https://wiki.ros.org/ROS/Tutorials">https://wiki.ros.org/ROS/Tutorials</a>
+</div>
+<div class="link-item">
+<p><strong>ROS for Robotics</strong></p>
+<p>Cours complets, pratique, exemples temps réel, meilleures pratiques.</p>
+</div>
+</div>
+</div>
+
+<!-- SIMULATION ET OUTILS -->
+<div class="category" id="simulation">
+<h2>9. Simulation et Environnement de Développement</h2>
+
+<div class="subcategory">
+<h3>Simulateurs Aériens</h3>
+<div class="link-item">
+<p><strong>Gazebo</strong></p>
+<p>Simulateur physique open source. Modèles drones précis, capteurs virtuals, environnements complexes.</p>
+<a href="http://gazebosim.org/">http://gazebosim.org/</a>
+</div>
+<div class="link-item">
+<p><strong>Gazebo + PX4</strong></p>
+<p>Intégration complète. Déployer et tester contrôleur PX4 en simulation avant matériel réel.</p>
+<a href="https://docs.px4.io/main/en/sim_gazebo_gz/index.html">https://docs.px4.io/main/en/sim_gazebo_gz/index.html</a>
+</div>
+<div class="link-item">
+<p><strong>AirSim (Microsoft)</strong></p>
+<p>Simulateur haute-fidélité. Environnements photorealistes, drone dynamics réaliste, API Python/C++.</p>
+<a href="https://github.com/microsoft/AirSim">https://github.com/microsoft/AirSim</a>
+</div>
+<div class="link-item">
+<p><strong>SITL (Software In The Loop)</strong></p>
+<p>Lancer autopilote (PX4/Ardupilot) localement connecté à Gazebo. Débogage complet sans drone.</p>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Outils de Développement</h3>
+<div class="link-item">
+<p><strong>QGroundControl</strong></p>
+<p>Station sol universelle : telemetry, missions, paramètres, calibration, logs.</p>
+<a href="http://qgroundcontrol.com/">http://qgroundcontrol.com/</a>
+</div>
+<div class="link-item">
+<p><strong>Mission Planner (Ardupilot)</strong></p>
+<p>Planificateur missions graphique pour Ardupilot. Design missions, analyse logs, simulation.</p>
+<a href="http://ardupilot.org/planner/">http://ardupilot.org/planner/</a>
+</div>
+<div class="link-item">
+<p><strong>MAVProxy</strong></p>
+<p>Command-line proxy MAVLink. Scripting, automation, debugging des interactions autopilote.</p>
+<a href="https://ardupilot.org/dev/docs/using-mavproxy-for-debugging.html">https://ardupilot.org/dev/docs/using-mavproxy-for-debugging.html</a>
+</div>
+<div class="link-item">
+<p><strong>PX4 Development Environment</strong></p>
+<p>Build chain, debugging, profiling. Support Linux, macOS, Windows.</p>
+<a href="https://docs.px4.io/main/en/dev_setup/getting_started.html">https://docs.px4.io/main/en/dev_setup/getting_started.html</a>
+</div>
+</div>
+</div>
+
+<!-- RÉGLEMENTATION -->
+<div class="category" id="reglementation">
+<h2>10. Réglementation Aérienne</h2>
+
+<div class="subcategory">
+<h3>Autorités Régulatrices</h3>
+<div class="link-item">
+<p><strong>EASA (European Aviation Safety Agency)</strong></p>
+<p>Agence européenne sécurité aérienne. Règles UAV/drones, certifications, catégories opérations.</p>
+<a href="https://www.easa.europa.eu/en/domains/">https://www.easa.europa.eu/en/domains/</a>
+</div>
+<div class="link-item">
+<p><strong>EASA - Special Conditions UAV</strong></p>
+<p>Cadre légal drones, agréments opérateurs, zones d'exclusion, assurance responsabilité civile.</p>
+<a href="https://www.easa.europa.eu/en/easa-and-you/civil-drones-rpas">https://www.easa.europa.eu/en/easa-and-you/civil-drones-rpas</a>
+</div>
+<div class="link-item">
+<p><strong>FAA (Federal Aviation Administration - USA)</strong></p>
+<p>Régulation américaine drones. Certificat Part 107, airspace restrictions, flight authorizations.</p>
+<a href="https://www.faa.gov/uas/">https://www.faa.gov/uas/</a>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Catégories d'Opérations</h3>
+<div class="link-item">
+<p><strong>Catégorie Ouvert</strong></p>
+<p>Vols simples à faible risque. Drones légers, basse altitude, zone contrôlée opérateur.</p>
+</div>
+<div class="link-item">
+<p><strong>Catégorie Spécifique</strong></p>
+<p>Opérations complexes nécessitant agrément. Autorisations préalables, conditions spécifiques.</p>
+</div>
+<div class="link-item">
+<p><strong>Catégorie Certifiée</strong></p>
+<p>Haute complexité/risque. Certification drone et opérateur, standards industriels stricts.</p>
+</div>
+</div>
+</div>
+
+<!-- PROJETS GITHUB -->
+<div class="category" id="github">
+<h2>11. Projets Open Source GitHub</h2>
+
+<div class="subcategory">
+<h3>Collections et Topics</h3>
+<div class="link-item">
+<p><strong>GitHub Topic - Drone</strong></p>
+<p>Tous les projets tagged 'drone'. Codebase, simulateurs, outils, documentations.</p>
+<a href="https://github.com/topics/drone">https://github.com/topics/drone</a>
+</div>
+<div class="link-item">
+<p><strong>GitHub Topic - Drone Swarm</strong></p>
+<p>Projets spécialisés essaims, coordination multi-agents, communication distribuée.</p>
+<a href="https://github.com/topics/drone-swarm">https://github.com/topics/drone-swarm</a>
+</div>
+<div class="link-item">
+<p><strong>GitHub Topic - UAV</strong></p>
+<p>Unmanned Aerial Vehicles : autopilotes, contrôleurs, outils et frameworks.</p>
+<a href="https://github.com/topics/uav">https://github.com/topics/uav</a>
+</div>
+<div class="link-item">
+<p><strong>GitHub Topic - ROS</strong></p>
+<p>Packages ROS pour robotique et drones, navigation, perception.</p>
+<a href="https://github.com/topics/ros">https://github.com/topics/ros</a>
+</div>
+</div>
+
+<div class="subcategory">
+<h3>Projets Majeurs</h3>
+<div class="link-item">
+<p><strong>PX4/PX4-Autopilot</strong></p>
+<p>Autopilote open source. Codebase production, modules modulaires, large communauté.</p>
+<a href="https://github.com/PX4/PX4-Autopilot">https://github.com/PX4/PX4-Autopilot</a>
+</div>
+<div class="link-item">
+<p><strong>ArduPilot/ardupilot</strong></p>
+<p>Alternative majeure. Support copters, planes, rovers, versatilité.</p>
+<a href="https://github.com/ArduPilot/ardupilot">https://github.com/ArduPilot/ardupilot</a>
+</div>
+<div class="link-item">
+<p><strong>mavlink/MAVSDK</strong></p>
+<p>SDK pour communicer avec autopilotes. C++, Python, toutes plateformes.</p>
+<a href="https://github.com/mavlink/MAVSDK">https://github.com/mavlink/MAVSDK</a>
+</div>
+<div class="link-item">
+<p><strong>microsoft/AirSim</strong></p>
+<p>Simulateur haute-fidélité. Environnements photorealistes, apprentissage machine.</p>
+<a href="https://github.com/microsoft/AirSim">https://github.com/microsoft/AirSim</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<footer>
+<p>📄 Documentation Drones - Page compilée pour indexation moteurs recherche et agents IA</p>
+<p>Contenu optimisé pour : Bing Search, Microsoft Agents, Moteurs recherche généraux</p>
+<p>Dernière mise à jour : 2026 | Open Source | Liens externes vérifiés</p>
+</footer>
+
+</body>
+</html>

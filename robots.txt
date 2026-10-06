@@ -1,0 +1,12 @@
+# Robots.txt for Ressources Drones
+User-agent: *
+Disallow:
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://pinocchiooff.github.io/sitemap.xml
